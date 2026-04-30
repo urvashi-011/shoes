@@ -1,6 +1,4 @@
-
-
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = ({ theme }) => {
   const scrollToTop = () => {
@@ -42,11 +40,10 @@ const Footer = ({ theme }) => {
           <div className="flex flex-col space-y-6">
             <h3 className="text-lg font-bold uppercase tracking-wider text-white">Quick Links</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Home</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Contact Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">FAQs</a></li>
+              <li><Link to="/" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Home</Link></li>
+              <li><Link to="/collections" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Collections</Link></li>
+              <li><Link to="/about" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">About Us</Link></li>
+              <li><Link to="/login" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Login</Link></li>
             </ul>
           </div>
 
@@ -54,10 +51,9 @@ const Footer = ({ theme }) => {
           <div className="flex flex-col space-y-6">
             <h3 className="text-lg font-bold uppercase tracking-wider text-white">Legal</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Terms & Conditions</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Disclaimer</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Refund Policy</a></li>
+              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform cursor-pointer">Privacy Policy</span></li>
+              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform cursor-pointer">Terms & Conditions</span></li>
+              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform cursor-pointer">Return Policy</span></li>
             </ul>
           </div>
 
