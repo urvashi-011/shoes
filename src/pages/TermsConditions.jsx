@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Footer from '../components/Footer';
+import SuggestedProducts from '../components/SuggestedProducts';
 
 const TermsConditions = ({ currentTheme }) => {
   useEffect(() => {
@@ -38,6 +39,7 @@ const TermsConditions = ({ currentTheme }) => {
           </section>
         </div>
       </div>
+      <SuggestedProducts currentTheme={currentTheme} />
       <Footer theme={currentTheme} />
     </div>
   );

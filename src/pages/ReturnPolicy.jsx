@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Footer from '../components/Footer';
+import SuggestedProducts from '../components/SuggestedProducts';
 
 const ReturnPolicy = ({ currentTheme }) => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const ReturnPolicy = ({ currentTheme }) => {
           </section>
         </div>
       </div>
+      <SuggestedProducts currentTheme={currentTheme} />
       <Footer theme={currentTheme} />
     </div>
   );

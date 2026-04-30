@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Footer from '../components/Footer';
+import SuggestedProducts from '../components/SuggestedProducts';
 
 const PrivacyPolicy = ({ currentTheme }) => {
   useEffect(() => {
@@ -38,6 +39,7 @@ const PrivacyPolicy = ({ currentTheme }) => {
           </section>
         </div>
       </div>
+      <SuggestedProducts currentTheme={currentTheme} />
       <Footer theme={currentTheme} />
     </div>
   );
