@@ -66,6 +66,9 @@ import Collections from "./pages/Collections";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import ReturnPolicy from "./pages/ReturnPolicy";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -168,6 +171,9 @@ const App = () => {
           <Route path="/about" element={<About currentTheme={currentTheme} />} />
           <Route path="/login" element={<Login currentTheme={currentTheme} />} />
           <Route path="/checkout" element={<Checkout currentTheme={currentTheme} />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy currentTheme={currentTheme} />} />
+          <Route path="/terms-conditions" element={<TermsConditions currentTheme={currentTheme} />} />
+          <Route path="/return-policy" element={<ReturnPolicy currentTheme={currentTheme} />} />
         </Routes>
       </div>
     </>

@@ -51,9 +51,9 @@ const Footer = ({ theme }) => {
           <div className="flex flex-col space-y-6">
             <h3 className="text-lg font-bold uppercase tracking-wider text-white">Legal</h3>
             <ul className="space-y-4">
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform cursor-pointer">Privacy Policy</span></li>
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform cursor-pointer">Terms & Conditions</span></li>
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform cursor-pointer">Return Policy</span></li>
+              <li><Link to="/privacy-policy" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Privacy Policy</Link></li>
+              <li><Link to="/terms-conditions" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Terms & Conditions</Link></li>
+              <li><Link to="/return-policy" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm font-medium hover:translate-x-2 inline-block transform">Return Policy</Link></li>
             </ul>
           </div>
 
