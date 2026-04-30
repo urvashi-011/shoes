@@ -15,7 +15,7 @@ const Footer = ({ theme }) => {
           {/* Column 1: Company Info */}
           <div className="flex flex-col space-y-6">
             <h2 className="text-3xl font-black uppercase tracking-tighter">
-              Nike <span className="text-[#ff4d4d]">Sneakers Official Store</span>
+              Nike <span className="text-[#ff4d4d]">Sneakers Official Hub</span>
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs font-medium">
               We bring inspiration and innovation to every athlete in the world. Step into the future with our premium collection.
