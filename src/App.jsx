@@ -1,4 +1,4 @@
-// Last updated: 2026-04-30 21:38
+// Last updated: 2026-04-30 22:00 - Added Policy Pages
 import React, { useState } from "react";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
