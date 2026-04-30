@@ -13,9 +13,9 @@ const FeaturedShoes = ({ theme }) => {
       {/* Left Text Content */}
       <div className="z-10 w-full md:w-[60%] md:max-w-xl flex flex-col">
         <h1 className={`text-5xl sm:text-7xl md:text-[120px] font-black uppercase ${theme?.primaryText || 'text-white'} leading-[0.85] tracking-tight transition-colors duration-700`}>
-          {theme?.name === 'green' ? 'Air Jordan' : theme?.name === 'red' ? 'Air DT Max' : 'Airmax Nike'}
+          {theme?.name === 'green' ? 'Air Jordan' : theme?.name === 'red' ? 'Air DT Max' : 'Air More'}
           <br />
-          {theme?.name === 'green' ? '18' : theme?.name === 'red' ? "'96" : '270'}
+          {theme?.name === 'green' ? '18' : theme?.name === 'red' ? "'96" : 'Uptempo'}
         </h1>
         
         {/* Mobile Spacer for Shoe */}

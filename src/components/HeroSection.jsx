@@ -139,6 +139,7 @@ const HeroSection = ({ isLoaded, themeIndex, onThemeChange, isScrolled }) => {
       title1: "Own the",
       strokeWord: "streets",
       title2: "with style.",
+      desc: "The Air More Uptempo encapsulates the basketball style of the 90s at its best. Big, bold, and in your face. It's an icon of sneaker history.",
     },
     {
       name: "Air Jordan 18",
@@ -152,6 +153,7 @@ const HeroSection = ({ isLoaded, themeIndex, onThemeChange, isScrolled }) => {
       title1: "Defy gravity,",
       strokeWord: "fly",
       title2: "higher.",
+      desc: "The Air Jordan 18 was famously worn by Michael Jordan during his final season. Inspired by high-performance Italian sports cars.",
     },
     {
       name: "Air DT Max '96",
@@ -164,6 +166,7 @@ const HeroSection = ({ isLoaded, themeIndex, onThemeChange, isScrolled }) => {
       title1: "Elevate every",
       strokeWord: "step",
       title2: "you take.",
+      desc: "The Air DT Max '96 is a fierce trainer built for the gridiron. With its distinctive aggressive strap and bold design lines.",
     },
   ];
 
@@ -233,31 +236,34 @@ const HeroSection = ({ isLoaded, themeIndex, onThemeChange, isScrolled }) => {
     >
 
       {/* ================= LEFT CONTENT ================= */}
-      <div ref={leftRef} className="w-full md:w-[60%] md:max-w-[480px] z-10 -mt-32 md:mt-20">
+      <div ref={leftRef} className="w-full md:w-[50%] lg:w-[45%] z-10 mt-20 md:mt-0 flex flex-col justify-center items-center md:items-start text-center md:text-left px-4">
 
-        <h1 ref={titleRef} className="text-3xl sm:text-4xl md:text-[52px] font-black uppercase text-white leading-[1.2] tracking-wide">
+        <h1 ref={titleRef} className="text-4xl sm:text-5xl md:text-[60px] lg:text-[80px] font-black uppercase text-white leading-[1.1] tracking-tight">
           {shoes[currentIndex].title1}<br />
           <span className="text-transparent" style={{ WebkitTextStroke: "1px rgba(255,255,255,1)" }}>
             {shoes[currentIndex].strokeWord}
           </span> {shoes[currentIndex].title2}
         </h1>
 
-        <h2 ref={subtitleRef} className="text-sm sm:text-base md:text-3xl font-bold tracking-[2px] md:tracking-[8px] uppercase text-white mt-4 md:mt-12">
+        <h2 ref={subtitleRef} className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-[4px] md:tracking-[8px] uppercase text-white mt-4 md:mt-8">
           {shoes[currentIndex].name}
         </h2>
 
-        {/* Divider — now has its own ref for animation */}
+        {/* Divider */}
         <div
           ref={dividerRef}
-          className="h-[1px] md:h-[2px] w-20 md:w-82 mt-2 md:mt-3"
+          className="h-[2px] w-20 md:w-32 lg:w-48 mt-4 md:mt-6"
           style={{ background: "linear-gradient(to right, #fff, transparent)" }}
         />
 
-        <div className="h-full w-full pt-4 md:pt-45">
-          <p ref={descRef} className="w-full md:w-[420px] text-white/85 text-[10px] md:text-[14px] leading-[1.6] md:leading-[1.8] mt-4 md:mt-7">
+        <div className="w-full mt-6 md:mt-10">
+          <p ref={descRef} className="w-full max-w-[450px] text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-medium">
+            {shoes[currentIndex].desc}
           </p>
 
-          <div ref={badgesRef} className="flex flex-wrap gap-2 md:gap-3 mt-4 md:mt-8">
+          <div ref={badgesRef} className="flex flex-wrap gap-3 mt-8 justify-center md:justify-start">
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">Premium Quality</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">Limited Edition</span>
           </div>
         </div>
       </div>
@@ -266,36 +272,32 @@ const HeroSection = ({ isLoaded, themeIndex, onThemeChange, isScrolled }) => {
       {/* ================= SHOES SLIDER ================= */}
       <div
         ref={shoeRef}
-        className="absolute right-[-10%] sm:right-[5%] md:right-[5%] lg:right-[10%] top-[65%] md:top-1/2 -translate-y-1/2 w-[260px] sm:w-[350px] md:w-[600px] h-[300px] md:h-[600px] flex items-center justify-center"
+        className="absolute md:relative right-[-10%] sm:right-[0%] md:right-0 top-[60%] sm:top-[55%] md:top-auto md:translate-y-0 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[750px] aspect-square flex items-center justify-center z-20"
       >
         {/* Only render the active shoe — GSAP handles all transitions */}
         <img
           src={shoes[currentIndex].image}
           alt={shoes[currentIndex].color}
-          className={`absolute w-full transition-opacity duration-300 ${isScrolled ? 'opacity-0 hidden' : 'opacity-100'}`}
+          className={`w-full h-full object-contain transition-opacity duration-300 ${isScrolled ? 'opacity-0 hidden' : 'opacity-100'}`}
           style={{
             transform: `rotate(${shoes[currentIndex].rotate}) translateY(${shoes[currentIndex].translateY || "0px"}) scale(${shoes[currentIndex].scale})`,
-            filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.6))",
+            filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.7))",
           }}
         />
 
-        {/* Platform ellipses — now has ref for animation */}
-        <svg
-          ref={platformRef}
-          className="absolute top-full -translate-y-16 md:-translate-y-12"
-          width="100%"
-          height="80"
-          viewBox="0 0 500 80"
-        >
-          <ellipse cx="250" cy="40" rx="200" ry="35"
-            fill="none" stroke="rgba(255,255,255,0.3)"
-            strokeWidth="2" strokeDasharray="5,5"
-          />
-          <ellipse cx="250" cy="40" rx="180" ry="30"
-            fill="none" stroke="rgba(255,255,255,0.15)"
-            strokeWidth="1"
-          />
-        </svg>
+        {/* Platform ellipses */}
+        <div ref={platformRef} className="absolute bottom-[10%] w-[80%] h-[40px] z-[-1]">
+          <svg width="100%" height="100%" viewBox="0 0 500 80" preserveAspectRatio="none">
+            <ellipse cx="250" cy="40" rx="200" ry="35"
+              fill="none" stroke="rgba(255,255,255,0.3)"
+              strokeWidth="2" strokeDasharray="5,5"
+            />
+            <ellipse cx="250" cy="40" rx="180" ry="30"
+              fill="none" stroke="rgba(255,255,255,0.15)"
+              strokeWidth="1"
+            />
+          </svg>
+        </div>
       </div>
 
 

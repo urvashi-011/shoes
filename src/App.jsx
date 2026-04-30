@@ -149,7 +149,7 @@ const App = () => {
           />
         )}
 
-        <div className="absolute top-0 left-0 right-0 px-10 py-5 z-50">
+        <div className="absolute top-0 left-0 right-0 px-4 sm:px-10 py-5 z-50">
           <Navbar isLoaded={!loading} />
         </div>
 

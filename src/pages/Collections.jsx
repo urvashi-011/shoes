@@ -5,13 +5,13 @@ import Footer from '../components/Footer';
 const Collections = ({ currentTheme }) => {
   const navigate = useNavigate();
   const products = [
-    { name: "Limited Edition 'Elite'", img: "/images/bg-1.jpeg", price: "$299" },
-    { name: "Limited Edition 'Pro'", img: "/images/bg-2.jpeg", price: "$285" },
+    { name: "Limited Edition 'Elite'", img: "/images/WhatsApp_Image_2026-04-30_at_5.52.52_PM-removebg-preview.png", price: "$299" },
+    { name: "Limited Edition 'Pro'", img: "/images/WhatsApp_Image_2026-04-30_at_5.54.15_PM-removebg-preview.png", price: "$285" },
     { name: "Air More Uptempo 'Black'", img: "/images/tempo.png", price: "$229" },
     { name: "Air Jordan 18 'Retro'", img: "/images/jordan.png", price: "$199" },
     { name: "Air DT Max '96 'Red'", img: "/images/dtmax.png", price: "$219" },
-    { name: "Exclusive Artist Series #01", img: "/images/coll-1.jpeg", price: "$250" },
-    { name: "Exclusive Artist Series #02", img: "/images/coll-2.jpeg", price: "$275" },
+    { name: "Exclusive Artist Series #01", img: "/images/WhatsApp_Image_2026-04-30_at_6.11.29_PM-removebg-preview.png", price: "$250" },
+    { name: "Exclusive Artist Series #02", img: "/images/WhatsApp_Image_2026-04-30_at_6.11.29_PM__1_-removebg-preview.png", price: "$275" },
   ];
 
   const handleProductClick = (product) => {

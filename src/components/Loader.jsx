@@ -96,7 +96,7 @@ const Loader = ({ onComplete }) => {
         {/* Nike Logo */}
         <img
           ref={logoRef}
-          src="/images/nike-logo.png"
+          src="/images/logo.png"
           className="w-50 mb-10 pl-10 invert"
           alt="Nike"
         />

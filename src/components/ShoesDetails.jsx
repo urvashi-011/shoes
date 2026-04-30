@@ -65,7 +65,7 @@ const ShoesDetails = () => {
             Performance <br /> that proves.
           </h1>
 
-          <img className="h-90 pl-50 pt" src="/images/nike-logo.png" alt="" />
+          <img className="h-90 pl-50 pt" src="/images/logo.png" alt="" />
 
           <img
             className="h-90  absolute rotate-10  top-60 left-170 z-50"
